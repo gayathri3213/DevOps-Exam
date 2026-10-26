@@ -35,9 +35,9 @@ pipeline {
         stage('push Docker Image to Docker Hub') {
             steps {
                 echo "push Docker Image to Docker Hub"
-                bat "docker tag mypythonapp:v1 gayathri3123/devopsexam_repository:devopsexamimage"               
+                bat "docker tag mypythonapp:v1 gayathri3123/devopsexam_repository:mypythonappimage"               
                     
-                bat "docker push gayathri3123/devopsexam_repository:devopsexamimage"
+                bat "docker push gayathri3123/devopsexam_repository:mypythonappimage"
                 
             }
         }
