@@ -1,0 +1,19 @@
+version: app/v1
+kind: Deployment
+metadata:
+  name: mypythonapp-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      name: mypythonapp
+  template:
+    metadata:
+      labels:
+        name: mypythonapp
+    spec:
+      containers:
+        - name: mypythonapp
+          image: gayathri3123/devopsexam_repository:devopsexamimage
+          ports:
+            - containerPort: 5000
